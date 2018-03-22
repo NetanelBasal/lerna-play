@@ -1,5 +1,11 @@
 {
 	"devDependencies": {
+		"cz-lerna-changelog": "^1.2.1",
 		"lerna": "^2.9.0"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-lerna-changelog"
+		}
 	}
 }

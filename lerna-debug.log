@@ -1,21 +1,95 @@
 0 silly input [ 'publish' ]
-1 silly flags { _: [ 'publish' ], 'reject-cycles': false, rejectCycles: false }
+1 silly flags { _: [ 'publish' ],
+1 silly flags   'reject-cycles': false,
+1 silly flags   rejectCycles: false,
+1 silly flags   scope: 'b' }
 2 verbose rootPath /Users/netanelbasal/www/lerna-play
 3 info version 2.9.0
 4 silly isInitialized
 5 silly isInitialized true
 6 silly existsSync /Users/netanelbasal/www/lerna-play/VERSION
 7 info versioning independent
-8 silly initialize attempt
-9 silly isDetachedHead
-10 silly getCurrentBranch
-11 error initialize caught error
-12 error Error: fatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.
-12 error Use '--' to separate paths from revisions, like this:
-12 error 'git <command> [<revision>...] -- [<file>...]'
-12 error
-12 error     at Function.module.exports.sync (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:303:26)
-12 error     at Function.execSync (/usr/local/lib/node_modules/lerna/lib/ChildProcessUtilities.js:59:30)
-12 error     at Function.getCurrentBranch (/usr/local/lib/node_modules/lerna/lib/GitUtilities.js:203:59)
-12 error     at Function.isDetachedHead (/usr/local/lib/node_modules/lerna/lib/GitUtilities.js:45:37)
-12 error     at PublishCommand.initialize (/usr/local/lib/node_modules/lerna/lib/commands/PublishCommand.js:260:36)
+8 info scope b
+9 silly initialize attempt
+10 silly isDetachedHead
+11 silly getCurrentBranch
+12 verbose getCurrentBranch master
+13 verbose isDetachedHead false
+14 silly getCurrentBranch
+15 verbose getCurrentBranch master
+16 silly getUpdates
+17 info Checking for updated packages...
+18 silly hasTags
+19 verbose hasTags false
+20 info Comparing with initial commit.
+21 verbose updated b
+22 info Checking for prereleased packages...
+23 silly collectDependents
+24 silly isPackageDependentOf b b
+25 silly collectUpdates
+26 verbose has filtered update b
+27 silly initialize success
+28 silly execute attempt
+29 silly runScriptSync preversion undefined
+30 silly runScriptSync preversion b
+31 silly runScriptSync version b
+32 silly runScriptSync version undefined
+33 silly addFile /Users/netanelbasal/www/lerna-play/packages/b/package.json
+34 silly commit Publish
+34 silly commit
+34 silly commit  - b@1.0.1
+35 verbose commit [ 'commit',
+35 verbose commit   '--no-verify',
+35 verbose commit   '-F',
+35 verbose commit   '/private/var/folders/ts/m6glgnmj3g35hs1vrj42q2sr0000gn/T/be134b85-b5ff-4a21-8506-e6c36e12b3b0/lerna-commit.txt' ]
+36 silly addTag b@1.0.1
+37 silly runScriptSync postversion b
+38 silly runScriptSync postversion undefined
+39 info publish Publishing packages to npm...
+40 silly existsSync /Users/netanelbasal/www/lerna-play/packages/b/scripts/prepublish.js
+41 verbose execScript No prepublish script found at /Users/netanelbasal/www/lerna-play/packages/b/scripts/prepublish.js
+42 verbose publishing b
+43 silly publishTaggedInDir latest b
+44 silly getExecOpts { cwd: '/Users/netanelbasal/www/lerna-play/packages/b' }
+45 error publish Retrying failed publish: b
+46 verbose publish error undefined
+47 verbose publishing b
+48 silly publishTaggedInDir latest b
+49 silly getExecOpts { cwd: '/Users/netanelbasal/www/lerna-play/packages/b' }
+50 error publish Retrying failed publish: b
+51 verbose publish error undefined
+52 verbose publishing b
+53 silly publishTaggedInDir latest b
+54 silly getExecOpts { cwd: '/Users/netanelbasal/www/lerna-play/packages/b' }
+55 error publish Retrying failed publish: b
+56 verbose publish error undefined
+57 verbose publishing b
+58 silly publishTaggedInDir latest b
+59 silly getExecOpts { cwd: '/Users/netanelbasal/www/lerna-play/packages/b' }
+60 error publish Retrying failed publish: b
+61 verbose publish error undefined
+62 verbose publishing b
+63 silly publishTaggedInDir latest b
+64 silly getExecOpts { cwd: '/Users/netanelbasal/www/lerna-play/packages/b' }
+65 error publish Ran out of retries while publishing b Error: Command failed: npm publish --tag latest
+65 error publish npm ERR! publish Failed PUT 403
+65 error publish npm ERR! code E403
+65 error publish npm ERR! You do not have permission to publish "b". Are you logged in as the correct user? : b
+65 error publish
+65 error publish npm ERR! A complete log of this run can be found in:
+65 error publish npm ERR!     /Users/netanelbasal/.npm/_logs/2018-03-22T16_18_07_211Z-debug.log
+65 error publish
+65 error publish     at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:236:11)
+65 error publish     at <anonymous>
+65 error publish     at process._tickCallback (internal/process/next_tick.js:188:7)
+66 error execute callback with error
+67 error Error: Command failed: npm publish --tag latest
+67 error npm ERR! publish Failed PUT 403
+67 error npm ERR! code E403
+67 error npm ERR! You do not have permission to publish "b". Are you logged in as the correct user? : b
+67 error
+67 error npm ERR! A complete log of this run can be found in:
+67 error npm ERR!     /Users/netanelbasal/.npm/_logs/2018-03-22T16_18_07_211Z-debug.log
+67 error
+67 error     at Promise.all.then.arr (/usr/local/lib/node_modules/lerna/node_modules/execa/index.js:236:11)
+67 error     at <anonymous>
